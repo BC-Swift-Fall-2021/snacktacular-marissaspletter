@@ -58,7 +58,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     }
 }
 
-extension LoginViewController: FUIAuthDelegate {
+extension LoginViewController  { //FUIAuthDelegate
     func authPickerViewController(forAuthUI authUI: FUIAuth) -> FUIAuthPickerViewController {
         let marginInsets: CGFloat = 16.0 // amount to indent UIImageView on each side
         let topSafeArea = self.view.safeAreaInsets.top

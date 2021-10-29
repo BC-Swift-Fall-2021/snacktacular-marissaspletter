@@ -17,6 +17,9 @@
 		5303DCEB2729E6A800470B9B /* SnacktacularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303DCEA2729E6A800470B9B /* SnacktacularUITests.swift */; };
 		5303DCED2729E6A800470B9B /* SnacktacularUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303DCEC2729E6A800470B9B /* SnacktacularUITestsLaunchTests.swift */; };
 		5303DCFA2729ECB200470B9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5303DCF92729ECB200470B9B /* GoogleService-Info.plist */; };
+		53BECF14272B25B100E291FD /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF13272B25B100E291FD /* SpotListViewController.swift */; };
+		53BECF16272B2D7900E291FD /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */; };
+		53BECF18272B30A000E291FD /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF17272B30A000E291FD /* SpotDetailViewController.swift */; };
 		AD68ACAD957734C82CF9177C /* Pods_Snacktacular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B193056DA7E52B024BF0F4 /* Pods_Snacktacular.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		5303DCEA2729E6A800470B9B /* SnacktacularUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacktacularUITests.swift; sourceTree = "<group>"; };
 		5303DCEC2729E6A800470B9B /* SnacktacularUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacktacularUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5303DCF92729ECB200470B9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		53BECF13272B25B100E291FD /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
+		53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
+		53BECF17272B30A000E291FD /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
 		5818E0F8D1414441342CB3FB /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +127,9 @@
 				5303DCCB2729E6A500470B9B /* SceneDelegate.swift */,
 				5303DCCD2729E6A500470B9B /* LoginViewController.swift */,
 				5303DCCF2729E6A500470B9B /* Main.storyboard */,
+				53BECF13272B25B100E291FD /* SpotListViewController.swift */,
+				53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */,
+				53BECF17272B30A000E291FD /* SpotDetailViewController.swift */,
 				5303DCD22729E6A800470B9B /* Assets.xcassets */,
 				5303DCD42729E6A800470B9B /* LaunchScreen.storyboard */,
 				5303DCD72729E6A800470B9B /* Info.plist */,
@@ -351,8 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53BECF14272B25B100E291FD /* SpotListViewController.swift in Sources */,
 				5303DCCE2729E6A500470B9B /* LoginViewController.swift in Sources */,
 				5303DCCA2729E6A500470B9B /* AppDelegate.swift in Sources */,
+				53BECF18272B30A000E291FD /* SpotDetailViewController.swift in Sources */,
+				53BECF16272B2D7900E291FD /* SpotTableViewCell.swift in Sources */,
 				5303DCCC2729E6A500470B9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +550,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -566,6 +579,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
