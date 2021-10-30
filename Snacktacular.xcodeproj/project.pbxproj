@@ -20,6 +20,7 @@
 		53BECF14272B25B100E291FD /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF13272B25B100E291FD /* SpotListViewController.swift */; };
 		53BECF16272B2D7900E291FD /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */; };
 		53BECF18272B30A000E291FD /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF17272B30A000E291FD /* SpotDetailViewController.swift */; };
+		53BECF1A272D8ADA00E291FD /* Spot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF19272D8ADA00E291FD /* Spot.swift */; };
 		AD68ACAD957734C82CF9177C /* Pods_Snacktacular.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B193056DA7E52B024BF0F4 /* Pods_Snacktacular.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		53BECF13272B25B100E291FD /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		53BECF17272B30A000E291FD /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		53BECF19272D8ADA00E291FD /* Spot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spot.swift; sourceTree = "<group>"; };
 		5818E0F8D1414441342CB3FB /* Pods-Snacktacular.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snacktacular.debug.xcconfig"; path = "Target Support Files/Pods-Snacktacular/Pods-Snacktacular.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 			children = (
 				5303DCC92729E6A500470B9B /* AppDelegate.swift */,
 				5303DCCB2729E6A500470B9B /* SceneDelegate.swift */,
+				53BECF19272D8ADA00E291FD /* Spot.swift */,
 				5303DCCD2729E6A500470B9B /* LoginViewController.swift */,
 				5303DCCF2729E6A500470B9B /* Main.storyboard */,
 				53BECF13272B25B100E291FD /* SpotListViewController.swift */,
@@ -365,6 +368,7 @@
 				5303DCCA2729E6A500470B9B /* AppDelegate.swift in Sources */,
 				53BECF18272B30A000E291FD /* SpotDetailViewController.swift in Sources */,
 				53BECF16272B2D7900E291FD /* SpotTableViewCell.swift in Sources */,
+				53BECF1A272D8ADA00E291FD /* Spot.swift in Sources */,
 				5303DCCC2729E6A500470B9B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

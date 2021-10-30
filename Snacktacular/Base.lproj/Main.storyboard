@@ -298,6 +298,11 @@
                                 <action selector="cancelButtonPressed:" destination="lFX-Nq-hS0" id="mX9-l0-Qre"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="Rpy-rX-Vrm">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="lFX-Nq-hS0" id="goB-9H-Mrj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -384,7 +389,7 @@
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="PrimaryColor">
-            <color red="0.85490196939999996" green="0.35686278339999999" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.85500001907348633" green="0.35699999332427979" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
