@@ -290,7 +290,11 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="aFx-uz-J98">
                             <color key="tintColor" name="PrimaryColor"/>
                         </barButtonItem>
-                        <barButtonItem title="Lookup Place" id="u0b-iv-hTI"/>
+                        <barButtonItem title="Lookup Place" id="u0b-iv-hTI">
+                            <connections>
+                                <action selector="lookupButtonPressed:" destination="lFX-Nq-hS0" id="71C-eK-C3O"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="lo7-3O-63C">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xas-xt-m6A">
