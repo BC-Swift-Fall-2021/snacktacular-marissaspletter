@@ -21,7 +21,25 @@ class Spot: NSObject, MKAnnotation  {
     var dictionary: [String: Any] {
         return ["name": name, "address": address, "latitude": latitude, "longitude": longitude, "averageRating": averageRating, "numberOfReviews": numberOfReviews, "postingUserID": postingUserID]
     }
-
+    var latitude: CLLocationDegrees {
+        return coordinate.latitude
+    }
+    
+    var longitude: CLLocationDegrees {
+        return coordinate.longitude
+    }
+    
+    var location: CLLocation {
+        return CLLocation(latitude: latitude, longitude: longitude)
+    }
+    
+    var title: String? {
+        return name
+    }
+    
+    var subtitle: String? {
+        return address
+    }
 
     init(name: String, address: String, coordinate: CLLocationCoordinate2D, averageRating: Double, numberOfReviews: Int, postingUserID: String, documentID: String) {
         self.name = name
