@@ -16,13 +16,18 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
     
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocation!
+    var reviews: [String] = ["Tasty","Aweful","Tasty","Aweful","Tasty","Aweful","Tasty","Aweful","Tasty","Aweful","Tasty","Aweful","Tasty","Aweful","Tasty","Aweful"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         getLocation()
         if spot == nil {
             spot = Spot()
@@ -189,5 +194,21 @@ extension SpotDetailViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("ERROR: \(error.localizedDescription). Failed to get device location.")
+    }
+}
+
+
+extension SpotDetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.photoArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        //let photoCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as! SpotPhotoCollectionViewCell
+        //photoCell.spot = spot
+        //photoCell.photo = photos.photoArray[indexPath.row]
+       // return photoCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReviewCell", for: indexPath)
+        return indexPath
     }
 }
