@@ -12,16 +12,71 @@ class ReviewTableViewController: UITableViewController {
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var addressLabel: UIView!
+    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var postedByLabel: UILabel!
     @IBOutlet weak var buttonsBackgroundView: UIView!
-    @IBOutlet weak var reviewTitleView: UITextField!
+    @IBOutlet weak var reviewTitleField: UITextField!
     @IBOutlet weak var reviewDateLabel: UILabel!
     @IBOutlet weak var reviewTextView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
+   
+    var review: Review!
+    var spot: Spot!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//
+//        // hide keyboard if we tap outside of a field
+//        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+//        tap.cancelsTouchesInView = false
+//        self.view.addGestureRecognizer(tap)
 
+        guard spot != nil else {
+            print("ERROR: No spot passed to ReviewTableViewController.swift")
+            return
+        }
+        if review == nil {
+            review = Review()
+        }
+        updateUserInterface()
+
+    }
+    
+    func updateUserInterface() {
+        nameLabel.text = spot.name
+        addressLabel.text = spot.address
+        reviewTitleField.text = review.title
+        reviewTextView.text = review.text
+//        rating = review.rating // will update rating stars on load
+//        reviewDateLabel.text = "posted: \(dateFormatter.string(from: review.date))"
+//        if review.documentID == "" { // This is a new review
+//            addBordersToEditableObjects()
+//        } else {
+//            if review.reviewUserID == Auth.auth().currentUser?.uid { // Review posted by current user
+//                self.navigationItem.leftItemsSupplementBackButton = false
+//                saveBarButton.title = "Update"
+//                addBordersToEditableObjects()
+//                deleteButton.isHidden = false
+//            } else { // Review posted by different user
+//                saveBarButton.hide()
+//                cancelBarButton.hide()
+//                postedByLabel.text = "Posted by: \(review.reviewUserEmail)"
+//                for starButton in starButtonCollection {
+//                    starButton.backgroundColor = .white
+//                    starButton.isEnabled = false
+//                }
+//                reviewTitleField.isEnabled = false
+//                reviewTitleField.borderStyle = .none
+//                reviewTextView.isEditable = false
+//                reviewTitleField.backgroundColor = .white
+//                reviewTextView.backgroundColor = .white
+//            }
+//        }
+    }
+    
+    func updateFromUserInterface() {
+        review.title = reviewTitleField.text!
+        review.text = reviewTextView.text!
     }
     
     func leaveViewController() {
@@ -46,6 +101,14 @@ class ReviewTableViewController: UITableViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
+        updateFromUserInterface()
+        review.saveData(spot: spot) { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("😡 ERROR: Can't unwind segue from Review because of review saving error.")
+            }
+        }
     }
     
     
