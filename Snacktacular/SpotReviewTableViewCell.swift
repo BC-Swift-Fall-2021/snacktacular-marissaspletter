@@ -11,6 +11,7 @@ class SpotReviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var reviewTextLabel: UILabel!
     @IBOutlet weak var reviewTitleLabel: UILabel!
+    @IBOutlet var starImageCollection: [UIImageView]!
     
     var review: Review! {
         didSet {
