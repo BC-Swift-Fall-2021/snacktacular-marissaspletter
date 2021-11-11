@@ -21,6 +21,8 @@
 		533A685E2738364800639D57 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A685D2738364800639D57 /* Review.swift */; };
 		533A68602738396900639D57 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A685F2738396900639D57 /* Reviews.swift */; };
 		533A68622738468900639D57 /* SpotReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A68612738468900639D57 /* SpotReviewTableViewCell.swift */; };
+		53A0DB72273D61BA00232328 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A0DB71273D61B900232328 /* PhotoViewController.swift */; };
+		53A0DB74273D969A00232328 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A0DB73273D969A00232328 /* Photo.swift */; };
 		53BECF14272B25B100E291FD /* SpotListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF13272B25B100E291FD /* SpotListViewController.swift */; };
 		53BECF16272B2D7900E291FD /* SpotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */; };
 		53BECF18272B30A000E291FD /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53BECF17272B30A000E291FD /* SpotDetailViewController.swift */; };
@@ -71,6 +73,8 @@
 		533A685D2738364800639D57 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		533A685F2738396900639D57 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		533A68612738468900639D57 /* SpotReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotReviewTableViewCell.swift; sourceTree = "<group>"; };
+		53A0DB71273D61B900232328 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		53A0DB73273D969A00232328 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		53BECF13272B25B100E291FD /* SpotListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotListViewController.swift; sourceTree = "<group>"; };
 		53BECF15272B2D7900E291FD /* SpotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotTableViewCell.swift; sourceTree = "<group>"; };
 		53BECF17272B30A000E291FD /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				53BECF1B272DA67C00E291FD /* Spots.swift */,
 				533A685D2738364800639D57 /* Review.swift */,
 				533A685F2738396900639D57 /* Reviews.swift */,
+				53A0DB73273D969A00232328 /* Photo.swift */,
 				5303DCCD2729E6A500470B9B /* LoginViewController.swift */,
 				53BECF21272EFE7000E291FD /* UIViewController+alert.swift */,
 				53F4F232273C81C3000271E7 /* UIVIew+addBoarder.swift */,
@@ -160,6 +165,7 @@
 				53BECF17272B30A000E291FD /* SpotDetailViewController.swift */,
 				533A68612738468900639D57 /* SpotReviewTableViewCell.swift */,
 				533A685B273718F100639D57 /* ReviewTableViewController.swift */,
+				53A0DB71273D61B900232328 /* PhotoViewController.swift */,
 				5303DCD22729E6A800470B9B /* Assets.xcassets */,
 				5303DCD42729E6A800470B9B /* LaunchScreen.storyboard */,
 				5303DCD72729E6A800470B9B /* Info.plist */,
@@ -400,7 +406,9 @@
 				53BECF18272B30A000E291FD /* SpotDetailViewController.swift in Sources */,
 				53F4F235273C8232000271E7 /* UIBarButtonItem+hide.swift in Sources */,
 				53BECF16272B2D7900E291FD /* SpotTableViewCell.swift in Sources */,
+				53A0DB72273D61BA00232328 /* PhotoViewController.swift in Sources */,
 				533A68622738468900639D57 /* SpotReviewTableViewCell.swift in Sources */,
+				53A0DB74273D969A00232328 /* Photo.swift in Sources */,
 				53BECF24272EFE9300E291FD /* APIKeys.swift in Sources */,
 				53BECF1A272D8ADA00E291FD /* Spot.swift in Sources */,
 				5303DCCC2729E6A500470B9B /* SceneDelegate.swift in Sources */,

@@ -131,7 +131,16 @@ class ReviewTableViewController: UITableViewController {
     
     @IBAction func reviewTitleDonePressed(_ sender: UITextField) {
     }
+    
+    
     @IBAction func deleteButtonPressed(_ sender: Any) {
+        review.deleteData(spot: spot) { (success) in
+            if success {
+                self.leaveViewController()
+            } else {
+                print("😡 Delete unsuccessful")
+            }
+        }
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
