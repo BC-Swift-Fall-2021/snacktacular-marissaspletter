@@ -171,6 +171,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="24"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="nameFieldChanged:" destination="lFX-Nq-hS0" eventType="editingDidEnd" id="v5k-nJ-rWy"/>
+                                            </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="address" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRC-4I-nGI">
                                             <rect key="frame" x="8" y="43" width="398" height="17"/>
@@ -424,9 +427,12 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressTextField" destination="KRC-4I-nGI" id="JTp-1t-IM2"/>
+                        <outlet property="cancelBarButton" destination="xas-xt-m6A" id="iwl-WB-C24"/>
+                        <outlet property="collectionView" destination="MJn-H6-cLH" id="Lpq-Kl-Pp8"/>
                         <outlet property="mapView" destination="Jnt-PZ-fnj" id="FaA-We-ycU"/>
                         <outlet property="nameTextField" destination="lGR-AP-ymD" id="x3W-PI-tyX"/>
                         <outlet property="ratingLabel" destination="zWC-Fz-JhX" id="5Dr-wB-Qzb"/>
+                        <outlet property="saveBarButton" destination="Rpy-rX-Vrm" id="D2s-Uw-rcd"/>
                         <outlet property="tableView" destination="SPc-OC-PgG" id="IBB-UH-Z1H"/>
                         <segue destination="SFj-B2-T1L" kind="presentation" identifier="AddReview" modalPresentationStyle="fullScreen" id="wmP-fN-7iV"/>
                     </connections>

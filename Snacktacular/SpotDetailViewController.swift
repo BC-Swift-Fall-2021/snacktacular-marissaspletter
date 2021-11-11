@@ -17,6 +17,9 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
@@ -50,7 +53,7 @@ class SpotDetailViewController: UIViewController {
         reviews.loadData(spot: spot) {
             self.tableView.reloadData()
         }
-        
+    }
         
         func setupMapView() {
             let region = MKCoordinateRegion(center: spot.coordinate, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
@@ -103,21 +106,31 @@ class SpotDetailViewController: UIViewController {
                 print("😡 Couldn't find a case for segue identifier \(segue.identifier ?? ""). This should not have happened!")
             }
         }
-        
+    
+    
+    @IBAction func nameFieldChanged(_ sender: UITextField) {
+        // prevent a title of blank spaces from being saved, too
+        let noSpacews = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if noSpacews != "" {
+            saveBarButton.isEnabled = true
+        } else {
+            saveBarButton.isEnabled = false
+        }
+    }
         
         func saveCancelAlert(title: String, message: String, segueIdentifier: String) {
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
             let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
                 self.spot.saveData { (success) in
-//                    self.saveBarButton.title = "Done"
-//                    self.cancelBarButton.hide()
-//                    self.navigationController?.setToolbarHidden(true, animated: true)
-//                    self.disableTextEditing()
-//                    if segueIdentifier == "AddReview" {
-                        self.performSegue(withIdentifier: segueIdentifier, sender: nil)
-//                    } else {
-//                        self.cameraOrLibraryAlert()
-//                    }
+                    //                    self.saveBarButton.title = "Done"
+                    //                    self.cancelBarButton.hide()
+                    //                    self.navigationController?.setToolbarHidden(true, animated: true)
+                    //                    self.disableTextEditing()
+                    //                    if segueIdentifier == "AddReview" {
+                    self.performSegue(withIdentifier: segueIdentifier, sender: nil)
+                    //                    } else {
+                    //                        self.cameraOrLibraryAlert()
+                    //                    }
                 }
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -162,11 +175,11 @@ class SpotDetailViewController: UIViewController {
         @IBAction func ratingButtonPressed(_ sender: Any) {
             //todo check if spot saved
             performSegue(withIdentifier: "AddReview", sender: nil)
-                    if spot.documentID == "" {
-                        saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it.", segueIdentifier: "AddReview")
-                    } else {
-                        performSegue(withIdentifier: "AddReview", sender: nil)
-                    }
+            if spot.documentID == "" {
+                saveCancelAlert(title: "This Venue Has Not Been Saved", message: "You must save this venue before you can review it.", segueIdentifier: "AddReview")
+            } else {
+                performSegue(withIdentifier: "AddReview", sender: nil)
+            }
         }
         
     }
@@ -291,3 +304,4 @@ class SpotDetailViewController: UIViewController {
             return indexPath
         }
     }
+
