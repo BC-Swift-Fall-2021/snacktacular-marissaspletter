@@ -20,12 +20,14 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var spot: Spot!
     let regionDistance: CLLocationDegrees = 750.0
     var locationManager: CLLocationManager!
     var reviews: Reviews!
     var photo: Photo!
+    var photos: Photos!
     var imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -39,6 +41,8 @@ class SpotDetailViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.delegate = self
         
         getLocation()
         if spot == nil {
@@ -51,6 +55,7 @@ class SpotDetailViewController: UIViewController {
         }
         setupMapView()
         reviews = Reviews()
+        photos = Photos()
         updateFromInterface()
         
     }
@@ -373,6 +378,8 @@ extension SpotDetailViewController: UICollectionViewDelegate, UICollectionViewDa
         return photoCell
     }
 }
+
+
 
 extension SpotDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

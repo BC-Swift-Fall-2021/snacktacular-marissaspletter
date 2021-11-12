@@ -20,7 +20,6 @@ private let dateFormatter: DateFormatter = {
 class PhotoViewController: UIViewController {
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
     @IBOutlet weak var saveBarButton: UIBarButtonItem!
-    
     @IBOutlet weak var deleteBarButton: UIBarButtonItem!
     @IBOutlet weak var postedByLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
