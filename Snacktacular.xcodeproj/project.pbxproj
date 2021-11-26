@@ -17,6 +17,10 @@
 		5303DCEB2729E6A800470B9B /* SnacktacularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303DCEA2729E6A800470B9B /* SnacktacularUITests.swift */; };
 		5303DCED2729E6A800470B9B /* SnacktacularUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5303DCEC2729E6A800470B9B /* SnacktacularUITestsLaunchTests.swift */; };
 		5303DCFA2729ECB200470B9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5303DCF92729ECB200470B9B /* GoogleService-Info.plist */; };
+		531EF7712751713800D83128 /* SnackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531EF7702751713800D83128 /* SnackUser.swift */; };
+		531EF77527517CD100D83128 /* SnackUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531EF77427517CD100D83128 /* SnackUserViewController.swift */; };
+		531EF77727517D0400D83128 /* SnackUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531EF77627517D0400D83128 /* SnackUserTableViewCell.swift */; };
+		531EF77927517F0100D83128 /* SnackUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531EF77827517F0100D83128 /* SnackUsers.swift */; };
 		533A685C273718F100639D57 /* ReviewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A685B273718F100639D57 /* ReviewTableViewController.swift */; };
 		533A685E2738364800639D57 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A685D2738364800639D57 /* Review.swift */; };
 		533A68602738396900639D57 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A685F2738396900639D57 /* Reviews.swift */; };
@@ -71,6 +75,10 @@
 		5303DCEA2729E6A800470B9B /* SnacktacularUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacktacularUITests.swift; sourceTree = "<group>"; };
 		5303DCEC2729E6A800470B9B /* SnacktacularUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnacktacularUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5303DCF92729ECB200470B9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		531EF7702751713800D83128 /* SnackUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUser.swift; sourceTree = "<group>"; };
+		531EF77427517CD100D83128 /* SnackUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUserViewController.swift; sourceTree = "<group>"; };
+		531EF77627517D0400D83128 /* SnackUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUserTableViewCell.swift; sourceTree = "<group>"; };
+		531EF77827517F0100D83128 /* SnackUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackUsers.swift; sourceTree = "<group>"; };
 		533A685B273718F100639D57 /* ReviewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewController.swift; sourceTree = "<group>"; };
 		533A685D2738364800639D57 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		533A685F2738396900639D57 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
@@ -159,6 +167,8 @@
 				533A685F2738396900639D57 /* Reviews.swift */,
 				53A0DB73273D969A00232328 /* Photo.swift */,
 				533E3B97273EDB2700555E35 /* Photos.swift */,
+				531EF7702751713800D83128 /* SnackUser.swift */,
+				531EF77827517F0100D83128 /* SnackUsers.swift */,
 				5303DCCD2729E6A500470B9B /* LoginViewController.swift */,
 				53BECF21272EFE7000E291FD /* UIViewController+alert.swift */,
 				53F4F232273C81C3000271E7 /* UIVIew+addBoarder.swift */,
@@ -172,6 +182,8 @@
 				533E3B99273EDECA00555E35 /* SpotPhotoCollectionViewCell.swift */,
 				533A685B273718F100639D57 /* ReviewTableViewController.swift */,
 				53A0DB71273D61B900232328 /* PhotoViewController.swift */,
+				531EF77427517CD100D83128 /* SnackUserViewController.swift */,
+				531EF77627517D0400D83128 /* SnackUserTableViewCell.swift */,
 				5303DCD22729E6A800470B9B /* Assets.xcassets */,
 				5303DCD42729E6A800470B9B /* LaunchScreen.storyboard */,
 				5303DCD72729E6A800470B9B /* Info.plist */,
@@ -416,10 +428,14 @@
 				53A0DB72273D61BA00232328 /* PhotoViewController.swift in Sources */,
 				533A68622738468900639D57 /* SpotReviewTableViewCell.swift in Sources */,
 				53A0DB74273D969A00232328 /* Photo.swift in Sources */,
+				531EF77727517D0400D83128 /* SnackUserTableViewCell.swift in Sources */,
+				531EF77527517CD100D83128 /* SnackUserViewController.swift in Sources */,
 				53BECF24272EFE9300E291FD /* APIKeys.swift in Sources */,
 				53BECF1A272D8ADA00E291FD /* Spot.swift in Sources */,
 				5303DCCC2729E6A500470B9B /* SceneDelegate.swift in Sources */,
+				531EF7712751713800D83128 /* SnackUser.swift in Sources */,
 				533E3B9A273EDECA00555E35 /* SpotPhotoCollectionViewCell.swift in Sources */,
+				531EF77927517F0100D83128 /* SnackUsers.swift in Sources */,
 				53F4F233273C81C3000271E7 /* UIVIew+addBoarder.swift in Sources */,
 				53BECF1C272DA67C00E291FD /* Spots.swift in Sources */,
 			);

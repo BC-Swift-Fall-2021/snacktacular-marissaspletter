@@ -28,9 +28,8 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
     }
 
     func signIn() {
-        // note FUIGoogleAuth line was previously: FUIGoogleAuth(), Google changed to line below in latest update
         let providers: [FUIAuthProvider] = [
-          FUIGoogleAuth(authUI: authUI!),
+          FUIGoogleAuth(),
         ]
         if authUI.auth?.currentUser == nil { // user has not signed in
             self.authUI.providers = providers // show providers named after let providers: above
@@ -38,7 +37,19 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             loginViewController.modalPresentationStyle = .fullScreen
             present(loginViewController, animated: true, completion: nil)
         } else { // user is already logged in
-            performSegue(withIdentifier: "FirstShowSegue", sender: nil)
+            guard let currentUser = authUI.auth?.currentUser else {
+                print("😡 ERROR: Couldn't get currentUser")
+                return
+            }
+            let snackUser = SnackUser(user: currentUser)
+            snackUser.saveIfNewUser { (success) in
+                if success {
+                    self.performSegue(withIdentifier: "FirstShowSegue", sender: nil)
+                } else {
+                    print("😡 ERROR: Tried to save a new SnackUser, but failed")
+                }
+            }
+            
         }
     }
     
